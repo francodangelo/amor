@@ -22,5 +22,5 @@ plotmd = function(data)
     mapply(lines, dens, lty=c(1, 2), lwd=1, col=c("black", "grey"))
     legend("topright", legend=names(dens), lty=c(1, 2), col=c("black", "grey"))
   }
-  else {print("Please check the input data.")}
+  else {print("Please check that the input data frame comes from either olsmd() or mlmd().")}
 }
