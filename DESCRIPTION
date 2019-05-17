@@ -1,7 +1,7 @@
 Package: amor
 Type: Package
 Title: Assessing Model Robustness in the Computation of Treatment Effects
-Version: 0.1.1
+Version: 0.1.2
 Author: Franco D'Angelo <franco.dangelo@minerva.kgi.edu>
 Maintainer: Franco D'Angelo <franco.dangelo@minerva.kgi.edu>
 Description: Set of tools to help address model robustness in the computation of average treatment effects.

@@ -56,6 +56,7 @@ mlmd = function(data, dep, treat, predictors, level, n.sims, method = "odds", ma
       f = paste(dep, p, sep = " ~ ")
       # Check for warnings in glm()
       modelWarning = tryCatch(glm(formula = f, family = 'binomial', data = data), warning = function(w) w)
+      if (inherits(modelWarning, "warning")) next
       # Generate the model
       m = glm(formula = f, family = 'binomial', data = data)
       # Check for warnings in predict()

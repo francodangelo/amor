@@ -55,6 +55,7 @@ olsmd = function(data, dep, treat, predictors, level, n.sims, matched.data = NUL
       f = paste(dep, p, sep = " ~ ")
       # Check for warnings in lm()
       modelWarning = tryCatch(lm(formula = f, data = data), warning = function(w) w)
+      if (inherits(modelWarning, "warning")) next
       # Generate the model
       m = lm(formula = f, data = data)
       # Check for warnings in predict()
